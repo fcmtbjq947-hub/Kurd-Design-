@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ديزاين برنت - طباعة حرارية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <img src="logo.svg" alt="ديزاين برنت" height="48">
+      </div>
+      <div class="site-title">
+        <h1>ديزاين برنت</h1>
+        <p class="tag">طباعة حرارية على أكواب، تيشرتات وهدايا — اطلب بسهولة من جوالك</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="card">
+      <h2>اطبع تصميمك الآن</h2>
+      <p>اختَر المنتج، ارفَع صورتك، عدِّل المعاينة، واطلب توصيل داخل دهوك.</p>
+
+      <div class="products">
+        <button class="prod-btn active" data-prod="mug">كوب</button>
+        <button class="prod-btn" data-prod="tshirt">تيشيرت</button>
+        <button class="prod-btn" data-prod="pillow">وسادة</button>
+      </div>
+
+      <div class="designer">
+        <div class="preview-area">
+          <div id="previewWrapper">
+            <!-- SVG mockup will be injected here -->
+          </div>
+        </div>
+        <div class="controls">
+          <label class="file">
+            اختر صورة للتصميم
+            <input type="file" id="imgInput" accept="image/*">
+          </label>
+          <label>نص إضافي:
+            <input id="textInput" placeholder="اكتب نصاً يظهر على المنتج">
+          </label>
+          <label>الكمية:
+            <input id="qtyInput" type="number" value="1" min="1">
+          </label>
+          <button id="addToCart">أضف إلى الطلب</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="card">
+      <h3>كيف نعمل؟</h3>
+      <ol>
+        <li>اختر المنتج والكمية</li>
+        <li>ارفع أو صمم الصورة داخل التطبيق</li>
+        <li>شاهد المعاينة</li>
+        <li>ادفع أو اختر الدفع عند الاستلام</li>
+        <li>نطبع ونوصل طلبك داخل دهوك</li>
+      </ol>
+    </section>
+
+    <section id="order" class="card">
+      <h3>الطلب</h3>
+      <div id="cartEmpty">لم تضع أي عنصر بعد.</div>
+      <div id="cartList" style="display:none;"></div>
+      <form id="orderForm" style="display:none;">
+        <label>الاسم الكامل: <input id="name" required></label>
+        <label>رقم الهاتف: <input id="phone" required></label>
+        <label>العنوان (تفصيلي): <input id="address" required></label>
+        <label>طريقة الدفع:
+          <select id="payment">
+            <option value="cod">الدفع عند الاستلام</option>
+            <option value="online">دفع إلكتروني (سيتم التواصل)</option>
+          </select>
+        </label>
+        <button type="submit">أرسل الطلب</button>
+      </form>
+      <div id="orderMsg"></div>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>تواصل معنا</h3>
+      <p>واتساب: <a href="https://wa.me/9647500000000" target="_blank">+964 75 0000 0000</a></p>
+      <p>إنستغرام: <a href="https://instagram.com" target="_blank">@designprint</a></p>
+    </section>
+
+    <footer class="site-footer card">
+      <p>© ديزاين برنت — الجميع محفوظ.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
